@@ -1,21 +1,56 @@
-⚠️ Le projet pdf2chunks est actuellement en phase de développement initial et n'est pas encore stable pour une utilisation en production. ⚠️
+⚠️ The pdf2chunks project is currently in early development phase and is not yet stable for production use. ⚠️
 
 # pdf2chunks
 
-Création de chunks vectorisé à destination d'une BDD vectoriel (Milvus) pour être exploité par des requêtes au sein d'un pipeline RAG.
+A Python tool designed to create vectorized chunks from PDF documents for integration into a vector database (Milvus), enabling RAG (Retrieval-Augmented Generation) pipeline queries.
+
+## Learning Project
+
+This project serves as a learning experience in:
+- Python development and best practices
+- AI/ML concepts implementation
+- Vector databases manipulation
+- RAG pipeline architecture
+- Large Language Models integration
+
+## Overview
+
+pdf2chunks processes PDF documents to:
+1. Extract and preserve document structure
+2. Create meaningful text chunks
+3. Generate vector embeddings using SFR-embedding-mistral
+4. Store data in Milvus vector database
+5. Enable efficient retrieval for RAG applications using Mistral-7B
 
 ## Installation
 
-Pré-requis : `Python3`, `uv` 
+### Prerequisites
+- Python 3
+- UV package manager
+- Milvus database
+- Ollama (for SFR-embedding-mistral and Mistral-7B models)
 
+### Setup
 ```shell
 uv venv
 source .venv/bin/activate
 uv sync
 ```
 
-## Lancement
-
+## Usage
 ```shell
 uv run start.py
 ```
+
+## Technologies
+
+- **PDF Processing**: camelot-py, pdfplumber
+- **Vector Database**: Milvus
+- **AI Models**:
+  - SFR-embedding-mistral (vector embeddings)
+  - Mistral-7B (text generation)
+- **Development Tools**: Python 3, UV package manager
+
+## License
+
+MIT
